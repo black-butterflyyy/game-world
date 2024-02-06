@@ -2,11 +2,11 @@
 
 export interface FetchResponse<T> {
   count: number;
+  next: string | null;
   results: T[];
 }
 
 export { CanceledError };
-
 
 const axiosInstance = axios.create({
   baseURL: 'https://api.rawg.io/api',
@@ -27,4 +27,3 @@ export default class APIClient<T> {
       .get<FetchResponse<T>>(this.endpoint, config)
       .then((res) => res.data);
 }
-
