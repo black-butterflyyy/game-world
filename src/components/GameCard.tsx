@@ -1,4 +1,4 @@
-﻿import { Game } from '../entities/Game.ts';
+﻿import Game from '../entities/Game.ts';
 import { Card, CardBody, HStack, Heading, Image } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import PlatformIconList from './PlatformIconList';
